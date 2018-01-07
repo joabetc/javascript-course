@@ -15,5 +15,9 @@ if(peso < 0) {
     console.log("Peso inválido");
 }
 
+if (peso > 1000) {
+    console.log("Peso inválido");
+}
+
 var imc = peso / (altura * altura);
 tdIMC.textContent = imc;
