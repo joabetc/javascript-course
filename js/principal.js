@@ -38,8 +38,6 @@ for(var i = 0; i < trPacientes.length; i++) {
     }
 }
 
-titulo.addEventListener("click", mostraMensagem);
-
-function mostraMensagem() {
-    console.log("Olá eu fui clicado!");
-}
+titulo.addEventListener("click", function() {
+    console.log("Olha só posso chamar uma função anônima.");
+});
