@@ -43,6 +43,8 @@ botaoAdicionar.addEventListener("click", function(event) {
     event.preventDefault();
     
     var form = document.querySelector("#form-adiciona");
-    console.log(form.altura.value);
-    console.log(form.peso.value);
+    var nome = form.nome.value;
+    var peso = form.peso.value;
+    var altura = form.altura.value;
+    var gordura = form.gordura.value;
 });
