@@ -29,18 +29,12 @@ function obtemPaciente(form) {
 function montarTR(paciente) {
   var pacienteTR = document.createElement("tr");
   pacienteTR.classList.add("paciente");
-    
-  var nomeTD = montarTD(paciente.nome, "info-nome");
-  var pesoTD = montarTD(paciente.peso, "info-peso");
-  var alturaTD = montarTD(paciente.altura, "info-altura");
-  var gorduraTD = montarTD(paciente.gordura, "info-gordura");
-  var imcTD = montarTD(paciente.imc, "info-imc");
 
-  pacienteTR.appendChild(nomeTD);
-  pacienteTR.appendChild(pesoTD);
-  pacienteTR.appendChild(alturaTD);
-  pacienteTR.appendChild(gorduraTD);
-  pacienteTR.appendChild(imcTD);
+  pacienteTR.appendChild(montarTD(paciente.nome, "info-nome"));
+  pacienteTR.appendChild(montarTD(paciente.peso, "info-peso"));
+  pacienteTR.appendChild(montarTD(paciente.altura, "info-altura"));
+  pacienteTR.appendChild(montarTD(paciente.gordura, "info-gordura"));
+  pacienteTR.appendChild(montarTD(paciente.imc, "info-imc"));
 
   return pacienteTR;
 }
