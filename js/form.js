@@ -18,7 +18,7 @@ botaoAdicionar.addEventListener("click", function(event) {
     pesoTD.textContent = paciente.peso;
     alturaTD.textContent = paciente.altura;
     gorduraTD.textContent = paciente.gordura;
-    imcTD.textContent = calculaIMC(paciente.peso, paciente.altura);
+    imcTD.textContent = paciente.imc;
 
     pacienteTR.appendChild(nomeTD);
     pacienteTR.appendChild(pesoTD);
@@ -37,7 +37,8 @@ function obtemPaciente(form) {
     nome: form.nome.value,
     peso: form.peso.value,
     altura: form.altura.value,
-    gordura: form.gordura.value
+    gordura: form.gordura.value,
+    imc: calculaIMC(peso, altura)
   }
 
   return paciente;
