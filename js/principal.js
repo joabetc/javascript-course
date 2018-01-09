@@ -60,4 +60,9 @@ botaoAdicionar.addEventListener("click", function(event) {
     pesoTD.textContent = peso;
     alturaTD.textContent = altura;
     gorduraTD.textContent = gordura;
+
+    pacienteTR.appendChild(nomeTD);
+    pacienteTR.appendChild(pesoTD);
+    pacienteTR.appendChild(alturaTD);
+    pacienteTR.appendChild(gorduraTD);
 });
