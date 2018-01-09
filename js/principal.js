@@ -38,7 +38,7 @@ for(var i = 0; i < trPacientes.length; i++) {
     }
 }
 
-titulo.addEventListener("click", mostraMensagem());
+titulo.addEventListener("click", mostraMensagem);
 
 function mostraMensagem() {
     console.log("Olá eu fui clicado!");
