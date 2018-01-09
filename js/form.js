@@ -30,17 +30,11 @@ function montarTR(paciente) {
   var pacienteTR = document.createElement("tr");
   pacienteTR.classList.add("paciente");
     
-  var nomeTD = document.createElement("td");
-  var pesoTD = document.createElement("td");
-  var alturaTD = document.createElement("td");
-  var gorduraTD = document.createElement("td");
-  var imcTD = document.createElement("td");
-
-  nomeTD.textContent = paciente.nome;
-  pesoTD.textContent = paciente.peso;
-  alturaTD.textContent = paciente.altura;
-  gorduraTD.textContent = paciente.gordura;
-  imcTD.textContent = paciente.imc;
+  var nomeTD = montarTD(paciente.nome, "info-nome");
+  var pesoTD = montarTD(paciente.peso, "info-peso");
+  var alturaTD = montarTD(paciente.altura, "info-altura");
+  var gorduraTD = montarTD(paciente.gordura, "info-gordura");
+  var imcTD = montarTD(paciente.imc, "info-imc");
 
   pacienteTR.appendChild(nomeTD);
   pacienteTR.appendChild(pesoTD);
@@ -49,4 +43,11 @@ function montarTR(paciente) {
   pacienteTR.appendChild(imcTD);
 
   return pacienteTR;
+}
+
+function montarTD(dado, classe) {
+  var td = document.createElement("td");
+  td.textContent = dado;
+  td.classList.add(classe);
+  return td;
 }
