@@ -84,5 +84,13 @@ function validaPaciente(paciente) {
     erros.push("A gordura não pode ser vazio");
   }
 
+  if (paciente.peso.length == 0) {
+    erros.push("O peso não pode ser vazio");
+  }
+
+  if (paciente.altura.length == 0) {
+    erros.push("A altura não pode ser vazio");
+  }
+
   return erros;
 }
