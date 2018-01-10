@@ -68,12 +68,20 @@ function validaPaciente(paciente) {
 
   var erros = [];
 
+  if (paciente.nome.length == 0) {
+    erros.push("O nome não pode ser vazio");
+  }
+
   if (!validaPeso(paciente.peso)) {
     erros.push("O peso é inválido!");
   }
 
   if (!validaAltura(paciente.altura)) {
     erros.push("A altura é inválida!");
+  }
+
+  if (paciente.gordura.length == 0) {
+    erros.push("A gordura não pode ser vazio");
   }
 
   return erros;
